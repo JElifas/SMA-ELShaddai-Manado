@@ -1,6 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root {
+  --color-primary: #063346;
+  --color-secondary: #F16F7C;
+  --color-third: #7AAA9E;
+  --color-logo: #5EA4DC;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Nunito', 'Sans';
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
 }

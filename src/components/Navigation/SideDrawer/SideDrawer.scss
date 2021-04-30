@@ -1,0 +1,25 @@
+.SideDrawer {
+  width: 220px;
+  height: 100%;
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 102;
+  padding: 10px;
+  transition: all 0.3s ease-out;
+  overflow-y: auto;
+  transform: translateX(-100%);
+
+  @media (min-width: 40rem) {
+    display: none;
+  }
+}
+
+.Show {
+  transform: translateX(0);
+}
+
+.Exit {
+  transform: translateX(-100%);
+}

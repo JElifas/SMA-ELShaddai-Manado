@@ -1,0 +1,22 @@
+.Logo {
+  height: 100%;
+  display: inline-block;
+
+  img {
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  h3 {
+    margin-left: 8px;
+    text-align: center;
+    color: var(--color-logo);
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 600;
+
+    @media (max-width: 40rem) {
+      display: none;
+    }
+  }
+}
