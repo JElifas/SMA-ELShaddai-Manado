@@ -1,0 +1,55 @@
+.Berita {
+  margin-top: 12vh;
+}
+
+.Berita_Title {
+  text-align: center;
+  font-weight: 600;
+  color: var(--color-primary);
+
+  @media (max-width: 40rem) {
+    text-align: left;
+    padding: 0 20px;
+    font-size: 1.5rem;
+  }
+}
+
+.Berita_Container {
+  width: 70%;
+  margin: auto;
+  padding: 10px;
+
+  @media (max-width: 40rem) {
+    width: 100%;
+  }
+
+  .Berita_Subtitle {
+    padding: 10px;
+    color: var(--color-secondary);
+    border-bottom: 3px solid var(--color-secondary);
+    display: inline-block;
+  }
+
+  .Berita_Content {
+    border-bottom: 2px solid rgba($color: #303030, $alpha: 0.1);
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+      background: rgba($color: #e2e2e2, $alpha: 0.3);
+    }
+
+    .Content_Title {
+      font-size: 0.9rem;
+      color: var(--color-primary);
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: var(--color-muted);
+    }
+  }
+}
