@@ -1,5 +1,6 @@
 .Berita {
   margin-top: 12vh;
+  margin-bottom: 40px;
 }
 
 .Berita_Title {
@@ -39,7 +40,7 @@
 
     &:hover {
       cursor: pointer;
-      background: rgba($color: #e2e2e2, $alpha: 0.3);
+      background: rgba($color: #dadada, $alpha: 0.3);
     }
 
     .Content_Title {

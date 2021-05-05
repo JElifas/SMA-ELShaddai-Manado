@@ -1,3 +1,16 @@
+.Spinner_Container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-layout);
+}
+
 .lds-default {
   margin: auto;
   display: block;
