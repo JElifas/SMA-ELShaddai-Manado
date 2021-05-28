@@ -32,7 +32,7 @@ const Footer = props => {
         <div className="Navigation_Footer--first">
           <NavLink to="/" activeClassName="active" exact>Beranda</NavLink>
           <NavLink to="/a" activeClassName="active" exact>Tentang Kami</NavLink>
-          <NavLink to="/a" activeClassName="active" exact>Pendaftaran Online</NavLink>
+          <NavLink to="/Pendaftaran" activeClassName="active" exact>Pendaftaran Online</NavLink>
           <NavLink to="/a" activeClassName="active" exact>Kontak</NavLink>
         </div>
         <div className="Navigation_Footer--second">

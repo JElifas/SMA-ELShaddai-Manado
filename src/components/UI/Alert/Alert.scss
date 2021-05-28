@@ -1,0 +1,26 @@
+.Alert {
+  padding: 8px;
+  margin: auto;
+  text-align: center;
+  font-family: "Nunito Sans";
+  font-weight: bold;
+  border-radius: 5px;
+
+  pre {
+    font-size: 1rem;
+    font-family: "Nunito Sans";
+  }
+}
+
+.Alert-Success,
+.Alert-Danger {
+  width: 60%;
+
+  @media (max-width: 40rem) {
+    width: 80%;
+  }
+}
+
+.Alert-Danger {
+  color: var(--color-secondary);
+}

@@ -12,7 +12,7 @@ const Toolbar = props => {
         <Logo />
       </div>
       <div className="Navigation_Container">
-        <NavigationItems click={props.toggle} />
+        <NavigationItems />
       </div>
     </header>
   );

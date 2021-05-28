@@ -1,0 +1,44 @@
+.Modal {
+  position: fixed;
+  z-index: 500;
+  background-color: white;
+  max-width: 1000px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #ccc;
+  padding: 16px;
+  left: 50%;
+  top: 50%;
+  box-sizing: border-box;
+  transition: all 0.3s ease-out;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  font-family: "Nunito Sans";
+
+  @media (max-width: 40rem) {
+    width: 90%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  @media (min-width: 93rem) {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.Show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.exitActive {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
