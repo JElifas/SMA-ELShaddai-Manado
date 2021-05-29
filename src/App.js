@@ -13,6 +13,10 @@ const Pendaftaran = React.lazy(() => {
   return import('./containers/Pendaftaran/Pendaftaran');
 });
 
+const Berita = React.lazy(() => {
+  return import('./containers/Berita/Berita');
+});
+
 const App = props => {
   return (
     <Layout>
@@ -20,6 +24,7 @@ const App = props => {
         <Switch>
           <Route path="/" exact render={(props) => <Home {...props} />} />
           <Route path="/Pendaftaran" exact render={(props) => <Pendaftaran {...props} />} />
+          <Route path="/Berita/:id" exact render={(props) => <Berita {...props} />} />
           <Redirect to="/" />
         </Switch>
       </Suspense>

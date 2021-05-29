@@ -1,5 +1,6 @@
 export {
-  fetchBerita
+  fetchBerita,
+  fetchSingleBerita
 } from './berita';
 
 export {

@@ -14,7 +14,7 @@ const Home = props => {
   }, [onFetchBerita]);
 
   const onClickBeritaHandler = (id) => {
-    console.log(id)
+    props.history.replace('/Berita/' + id);
   }
 
   return (

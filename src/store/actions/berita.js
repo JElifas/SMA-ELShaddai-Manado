@@ -25,3 +25,34 @@ const fetchBeritaSuccess = (resData) => {
     dataBerita: resData.response
   }
 }
+
+export const fetchSingleBerita = (id) => {
+  return dispatch => {
+    dispatch(fetchSingleBeritaStart());
+    axios.get('/berita/' + id)
+      .then(res => {
+        dispatch(fetchSingleBeritaSuccess(res.data));
+      }).catch(() => {
+        dispatch(fetchSingleBeritaFail());
+      })
+  }
+}
+
+const fetchSingleBeritaStart = () => {
+  return {
+    type: actionTypes.FETCH_SINGLE_BERITA_START
+  }
+}
+
+const fetchSingleBeritaSuccess = (resData) => {
+  return {
+    type: actionTypes.FETCH_SINGLE_BERITA_SUCCESS,
+    singleBerita: resData.response
+  }
+}
+
+const fetchSingleBeritaFail = () => {
+  return {
+    type: actionTypes.FETCH_SINGLE_BERITA_FAIL
+  }
+}
