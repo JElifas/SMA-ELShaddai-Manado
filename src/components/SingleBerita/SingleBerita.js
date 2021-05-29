@@ -10,8 +10,8 @@ const SingleBerita = props => {
         <h1 className="Title">{props.berita.title}</h1>
         <Editor
           editorState={props.editor}
-          toolbarStyle={{ display: 'none' }}
-          editorStyle={{ pointerEvents: 'none' }} />
+          toolbarHidden={true}
+          readOnly={true} />
       </div>
     </section>
   );

@@ -4,6 +4,7 @@ import * as actions from '../../store/actions/index';
 
 import Input from '../../components/UI/Input/Input';
 import Button from '../../components/UI/Button/Button';
+import Spinner from '../../components/UI/Spinner/Spinner';
 import Alert from '../../components/UI/Alert/Alert';
 import Modal from '../../components/UI/Modal/Modal';
 import { updateObject, checkValidity, resetSiswaForm, resetAyahForm, resetIbuForm, resetWaliForm } from '../../shared/utility';
@@ -368,11 +369,6 @@ const Pendaftaran = props => {
       waliData: waliData
     };
 
-    setSiswaForm(resetSiswaForm);
-    setAyahForm(resetAyahForm);
-    setIbuForm(resetIbuForm);
-    setWaliForm(resetWaliForm);
-    setFormIsValid(false);
     props.onDaftarBaru(formData);
     window.scrollTo({
       top: 0,
@@ -481,6 +477,11 @@ const Pendaftaran = props => {
   }, [reset]);
 
   const modalTogglerHandler = () => {
+    setSiswaForm(resetSiswaForm);
+    setAyahForm(resetAyahForm);
+    setIbuForm(resetIbuForm);
+    setWaliForm(resetWaliForm);
+    setFormIsValid(false);
     props.modalTogglerHandler();
   }
 
@@ -488,18 +489,25 @@ const Pendaftaran = props => {
     <Alert key={err + Date.now()} alertType="Alert-Danger">{props.error[0].join('\n')}</Alert>
   ));
 
+  let pendaftaran = <Spinner />
+  if (!props.loading) {
+    pendaftaran = (
+      <div className="Pendaftaran">
+        <h1 className="Title">Pendaftaran Online</h1>
+        {error}
+        {siswaFormElement}
+      </div>
+    );
+  }
+
   return (
-    <div className="Pendaftaran">
+    <React.Fragment>
       <Modal show={modalToggler} clicked={modalTogglerHandler} >
         <svg xmlns="http://www.w3.org/2000/svg" width="36" height="38" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.25 17.292l-4.5-4.364 1.857-1.858 2.643 2.506 5.643-5.784 1.857 1.857-7.5 7.643z" /></svg>
-        <p>
-          Data berhasil di simpan!
-        </p>
+        <p>Data berhasil di simpan!</p>
       </Modal>
-      <h1 className="Title">Pendaftaran Online</h1>
-      {error}
-      {siswaFormElement}
-    </div>
+      {pendaftaran}
+    </React.Fragment>
   );
 }
 
@@ -507,7 +515,7 @@ const mapStateToProps = state => {
   return {
     loading: state.pendaftaranReducer.loading,
     error: state.pendaftaranReducer.error,
-    modalToggler: state.pendaftaranReducer.modalToggler    
+    modalToggler: state.pendaftaranReducer.modalToggler
   };
 }
 
