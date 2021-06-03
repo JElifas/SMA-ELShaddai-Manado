@@ -1,0 +1,117 @@
+.Kontak {
+  margin: auto;
+  margin-top: 60px;
+  width: 100%;
+
+  @media (max-width: 40rem) {
+    width: 100%;
+  }
+}
+
+.Kontak_Description {
+  width: 100%;
+  margin: 5vh 0;
+  min-height: 30vh;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 40rem) {
+    flex-direction: column;
+  }
+
+  .Kontak_Content,
+  .Kontak_Icon {
+    max-width: 40%;
+
+    @media (max-width: 40rem) {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+.Kontak_Content {
+  padding: 20px;
+
+  @media (max-width: 40rem) {
+    padding: 10px;
+  }
+
+  h2 {
+    color: var(--color-primary);
+    margin: 8px 0;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .Kontak_Street {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 10px 0;
+    max-width: 440px;
+    display: flex;
+
+    svg {
+      vertical-align: middle;
+      min-width: 24px;
+      margin: 0 8px;
+    }
+
+    span {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+  }
+}
+
+.Kontak_Icon {
+  padding: 20px;
+
+  @media (max-width: 40rem) {
+    padding: 10px;
+  }
+}
+
+.Kontak_Phone {
+  max-width: 200px;
+  border-radius: 20px;
+  border: 1px solid var(--color-third);
+  padding: 8px;
+  margin: 10px 0;
+  text-align: center;
+
+  svg {
+    vertical-align: middle;
+    margin-right: 5px;
+    fill: var(--color-third);
+  }
+
+  span {
+    color: var(--color-third);
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+}
+
+.Kontak_Email {
+  max-width: 200px;
+  border-radius: 20px;
+  background: #ccc;
+  padding: 8px;
+  text-align: center;
+
+  svg {
+    vertical-align: middle;
+    margin-right: 5px;
+    fill: var(--color-primary);
+  }
+
+  span {
+    color: var(--color-primary);
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+}
