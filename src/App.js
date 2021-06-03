@@ -21,6 +21,10 @@ const Kontak = React.lazy(() => {
   return import('./containers/Kontak/Kontak');
 });
 
+const Gallery = React.lazy(() => {
+  return import('./containers/Gallery/Gallery');
+});
+
 const App = props => {
   return (
     <Layout>
@@ -30,6 +34,7 @@ const App = props => {
           <Route path="/Pendaftaran" exact render={(props) => <Pendaftaran {...props} />} />
           <Route path="/Berita/:id" exact render={(props) => <Berita {...props} />} />
           <Route path="/Kontak" exact render={(props) => <Kontak {...props} />} />
+          <Route path="/Gallery" exact render={(props) => <Gallery {...props} />} />
           <Redirect to="/" />
         </Switch>
       </Suspense>

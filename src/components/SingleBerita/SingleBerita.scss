@@ -1,17 +1,21 @@
 .SingleBerita {
   width: 100%;
-  margin-top: 10vh;
+  margin-top: 60px;
+}
 
-  .Container {
-    min-height: 100vh;
+.SingleBerita_Container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
 
-    .Title {
-      margin: 10px 0;
-    }
+  .Title {
+    margin: 10px 0;
+  }
 
-    img {
-      max-width: 500px;
-      max-height: 500px;
-    }
+  img {
+    max-width: 500px;
+    max-height: 500px;
   }
 }

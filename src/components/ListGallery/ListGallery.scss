@@ -1,0 +1,13 @@
+.Gallery {
+  margin: auto;
+  margin-top: 60px;
+  width: 100%;
+  display: grid;
+  grid-gap: 5px;
+  justify-content: center;
+  grid-template-columns: repeat(3, minmax(300px, 300px));
+
+  @media (max-width: 40rem) {
+    grid-template-columns: repeat(1, minmax(300px, 300px));
+  }
+}

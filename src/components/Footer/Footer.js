@@ -5,7 +5,7 @@ import './Footer.scss';
 const Footer = props => {
   return (
     <footer className="Footer">
-      <div className="Container">
+      <div className="Footer_Container">
         <div className="Email">
           <h4>Email</h4>
           <p>
@@ -36,7 +36,7 @@ const Footer = props => {
           <NavLink to="/Kontak" activeClassName="active" exact>Kontak</NavLink>
         </div>
         <div className="Navigation_Footer--second">
-          <NavLink to="/a" activeClassName="active" exact>Galeri</NavLink>
+          <NavLink to="/Gallery" activeClassName="active" exact>Galeri</NavLink>
           <NavLink to="/a" activeClassName="active" exact>Guru</NavLink>
         </div>
       </div>

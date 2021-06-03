@@ -8,7 +8,7 @@ const NavigationItems = props => {
       <NavigationItem link="/Tentang" toggle={props.click}>Tentang Kami</NavigationItem>
       <NavigationItem link="/Pendaftaran" toggle={props.click}>Pendaftaran Online</NavigationItem>
       <NavigationItem link="/Kontak" toggle={props.click}>Kontak</NavigationItem>
-      <NavigationItem link="/Tentang" toggle={props.click}>Galeri</NavigationItem>
+      <NavigationItem link="/Gallery" toggle={props.click}>Galeri</NavigationItem>
       <NavigationItem link="/Tentang" toggle={props.click}>Guru</NavigationItem>
     </ul>
   );

@@ -8,3 +8,7 @@ export {
   reset,
   modalTogglerHandler
 } from './pendaftaran';
+
+export {
+  fetchImageGallery
+} from './gallery';
