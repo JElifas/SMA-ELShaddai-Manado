@@ -8,7 +8,7 @@ import Spinner from '../../components/UI/Spinner/Spinner';
 import ModalImage from '../../components/UI/ModalImage/ModalImage';
 import SingleImage from '../../components/ListImage/SingleImage/SingleImage';
 
-const Gallery = props => {
+const Guru = props => {
   const [modalToggler, setModalToggler] = useState(false);
   const [singleImage, setSingleImage] = useState([]);
   const { onFetchImage } = props;
@@ -29,13 +29,13 @@ const Gallery = props => {
 
   let listImage = <Spinner />;
   if (!props.loading) {
-    listImage = <ListImage previewImg={props.image} modalImage={onImageSelectedHandler} url_type='galleries/' />;
+    listImage = <ListImage previewImg={props.image} modalImage={onImageSelectedHandler} url_type='guru/' />;
   }
 
   return (
     <React.Fragment>
       <ModalImage show={modalToggler} clicked={modalTogglerHandler} >
-        <SingleImage image={singleImage} url_type='galleries/' />
+        <SingleImage image={singleImage} url_type='guru/' />
       </ModalImage>
       {listImage}
     </React.Fragment>
@@ -44,15 +44,15 @@ const Gallery = props => {
 
 const mapStateToProps = state => {
   return {
-    image: state.galleryReducer.image,
-    loading: state.galleryReducer.loading
+    image: state.guruReducer.image,
+    loading: state.guruReducer.loading
   };
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    onFetchImage: () => dispatch(actions.fetchImageGallery())
+    onFetchImage: () => dispatch(actions.fetchImageGuru())
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Gallery, axios);
+export default connect(mapStateToProps, mapDispatchToProps)(Guru, axios);

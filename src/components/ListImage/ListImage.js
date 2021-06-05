@@ -1,14 +1,14 @@
 import Image from '../UI/Image/Image';
 
-import './ListGallery.scss';
+import './ListImage.scss';
 
-const ListGallery = props => {
+const ListImage = props => {
   return (
-    <section className="Gallery">
+    <section className="ListImage">
       {props.previewImg.map((img, i) => (
         <Image
           key={i + img.id}
-          src={img.imageUrl}
+          src={props.url_type + img.imageUrl}
           alt={'image-' + i}
           click={() => props.modalImage(img.id)} />
       ))}
@@ -16,4 +16,4 @@ const ListGallery = props => {
   );
 }
 
-export default ListGallery;
+export default ListImage;

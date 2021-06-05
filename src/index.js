@@ -11,13 +11,15 @@ import thunk from 'redux-thunk';
 import beritaReducer from './store/reducers/berita';
 import pendaftaranReducer from './store/reducers/pendaftaran';
 import galleryReducer from './store/reducers/gallery';
+import guruReducer from './store/reducers/guru';
 
 const composeEnhancers = process.env.NODE_ENV === 'development' ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : null || compose;
 
 const rootReducer = combineReducers({
   beritaReducer: beritaReducer,
   pendaftaranReducer: pendaftaranReducer,
-  galleryReducer: galleryReducer
+  galleryReducer: galleryReducer,
+  guruReducer: guruReducer
 });
 
 const store = createStore(

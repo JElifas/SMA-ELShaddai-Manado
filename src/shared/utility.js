@@ -36,7 +36,7 @@ export const checkValidity = (value, rules) => {
     return isValid;
 }
 
-export const IMAGE_URL = 'http://localhost:8080/images/galleries/';
+export const IMAGE_URL = 'http://localhost:8080/images/';
 
 export const resetSiswaForm = () => {
     return {

@@ -12,3 +12,7 @@ export {
 export {
   fetchImageGallery
 } from './gallery';
+
+export {
+  fetchImageGuru
+} from './guru';

@@ -37,7 +37,7 @@ const Footer = props => {
         </div>
         <div className="Navigation_Footer--second">
           <NavLink to="/Gallery" activeClassName="active" exact>Galeri</NavLink>
-          <NavLink to="/a" activeClassName="active" exact>Guru</NavLink>
+          <NavLink to="/Guru" activeClassName="active" exact>Guru</NavLink>
         </div>
       </div>
     </footer>

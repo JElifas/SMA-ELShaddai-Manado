@@ -7,7 +7,7 @@ const SingleImage = props => {
     <img
       key={img.id}
       className="SingleImage"
-      src={IMAGE_URL + img.imageUrl} 
+      src={IMAGE_URL + props.url_type + img.imageUrl} 
       alt={img.imageUrl} />
   ));
 
